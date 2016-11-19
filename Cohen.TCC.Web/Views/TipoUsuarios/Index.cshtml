@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Cohen.TCC.Dominio.TipoUsuario>
+
+@{
+    Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Tipo Usuário - Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nm_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nm_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nm_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nm_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_cadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_inativo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_tipo_usuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_tipo_usuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_tipo_usuario })
+        </td>
+    </tr>
+}
+
+</table>

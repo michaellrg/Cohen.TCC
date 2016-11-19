@@ -1,0 +1,57 @@
+﻿@model Cohen.TCC.Dominio.Usuario
+
+@{
+    Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Usuário - Details";
+}
+
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_senha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_cadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_inativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_tipo_usuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

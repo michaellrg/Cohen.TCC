@@ -1,0 +1,65 @@
+﻿@model Cohen.TCC.Dominio.Cliente
+
+@{
+    Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Cliente - Details";
+}
+
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.veiculo_cliente.id_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.veiculo_cliente.id_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cnh_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cnh_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_cadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_inativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_tipo_cliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

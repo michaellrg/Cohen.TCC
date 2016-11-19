@@ -1,0 +1,80 @@
+﻿@model Cohen.TCC.Dominio.Veiculo
+
+@{
+    Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Veículo - Delete";
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_veiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_veiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nu_placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nu_placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_cor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_cor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nu_porta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nu_porta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_cadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_inativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

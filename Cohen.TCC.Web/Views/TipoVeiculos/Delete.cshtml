@@ -1,0 +1,55 @@
+﻿@model Cohen.TCC.Dominio.TipoVeiculo
+
+@{
+    Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Tipo Veículos - Delete";
+}
+
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+  
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_cadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_inativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Cohen.TCC.Dominio.TipoVeiculo>
+
+@{ Layout = "~/Views/Shared/_DashboardDados.cshtml";
+    ViewBag.Title = "Tipo Veículos - Create";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nm_tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nm_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_inativo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nm_tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nm_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_cadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_inativo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_tipo_veiculo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_tipo_veiculo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_tipo_veiculo })
+        </td>
+    </tr>
+}
+
+</table>
